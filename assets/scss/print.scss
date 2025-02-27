@@ -1,8 +1,10 @@
-*, html{
+*,
+html {
     padding: 0;
     margin: 0;
     outline: none;
 }
+
 /* Thiết lập cơ bản */
 body {
     font-family: 'Times New Roman', Times, serif;
@@ -10,9 +12,11 @@ body {
     margin: 0;
     padding: 0 10px;
     background: #f0f0f0;
+
     @media print {
         padding: 0;
     }
+
     @page {
         size: A4;
         margin: 0;
@@ -32,19 +36,36 @@ body {
         font-weight: bold;
         text-align: center;
         font-size: 18px;
-        margin-bottom: 15px
+        margin-bottom: 15px;
+
+        .header-company {
+            font-weight: normal;
+        }
     }
 
-    .info-box {
+    .info-box-row {
         display: flex;
-        // padding: 20px;
         width: 50%;
-        justify-content: flex-end;
-        margin-left: auto;
         margin-bottom: 15px;
-        .info-item {
-            white-space: nowrap;
-        }
+    }
+
+    .info-item {
+        white-space: nowrap;
+    }
+
+    .info-box-right {
+        margin-left: auto;
+    }
+
+    .info-box-left {
+        margin-bottom: 15px;
+        width: 20%;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
     }
 }
 
@@ -52,6 +73,7 @@ body {
 table {
     border-collapse: collapse;
     width: 100%;
+
     th,
     td {
         border: 1px solid black;
@@ -84,10 +106,6 @@ table {
     font-weight: bold;
 }
 
-// .input {
-//     outline: none;
-// }
-
 /* Ô nhập liệu */
 .input-field {
     width: 100%;
@@ -95,8 +113,9 @@ table {
     background: transparent;
     font-size: 14px;
     padding: 5px;
+
     &.border-bot {
-        padding-bottom: 0;
+        padding-bottom: 0px;
     }
 }
 
@@ -110,27 +129,27 @@ table {
     border: 2px solid black;
 }
 
+//Viền dưới
 .border-bot {
     border-bottom: 1px solid #ccc;
 }
 
-.tex-center{
+// Căn giữa nội dung
+.tex-center {
     text-align: center;
     justify-content: center;
 }
 
+// Phần chữ ký, căn đều hai bên
 .signature-section {
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
+// Ô chữ ký, chia đều khoảng cách
 .signature {
     flex: 1;
     padding: 10px;
     margin-bottom: 15px
-}
-
-.signature:last-child {
-    border-right: none;
 }
