@@ -1,0 +1,136 @@
+*, html{
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+/* Thiết lập cơ bản */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 10px;
+    background: #f0f0f0;
+    @media print {
+        padding: 0;
+    }
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
+
+.wraper {
+    background: #fff;
+    margin: 0 auto;
+    display: block;
+    width: 1060px;
+}
+
+/* Tiêu đề */
+.header {
+    .title {
+        font-weight: bold;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 15px
+    }
+
+    .info-box {
+        display: flex;
+        // padding: 20px;
+        width: 50%;
+        justify-content: flex-end;
+        margin-left: auto;
+        margin-bottom: 15px;
+        .info-item {
+            white-space: nowrap;
+        }
+    }
+}
+
+/* Bảng */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    th,
+    td {
+        border: 1px solid black;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+}
+
+/* Container chính */
+.container {
+    display: flex;
+}
+
+/* Cột trong container */
+.column {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Nhãn */
+.input-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+// .input {
+//     outline: none;
+// }
+
+/* Ô nhập liệu */
+.input-field {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    padding: 5px;
+    &.border-bot {
+        padding-bottom: 0;
+    }
+}
+
+/* Khoảng cách giữa các phần */
+.spacing {
+    margin-bottom: 15px;
+}
+
+/* Viền tùy chỉnh (nếu cần) */
+.bordered {
+    border: 2px solid black;
+}
+
+.border-bot {
+    border-bottom: 1px solid #ccc;
+}
+
+.tex-center{
+    text-align: center;
+    justify-content: center;
+}
+
+.signature-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.signature {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 15px
+}
+
+.signature:last-child {
+    border-right: none;
+}
