@@ -113,10 +113,16 @@ table {
     background: transparent;
     font-size: 14px;
     padding: 5px;
+<<<<<<< HEAD
 
     &.border-bot {
         padding-bottom: 0px;
     }
+=======
+    // &.border-bot {
+    //     padding-bottom: 0;
+    // }
+>>>>>>> 4308469 (git)
 }
 
 /* Khoảng cách giữa các phần */
@@ -132,6 +138,7 @@ table {
 //Viền dưới
 .border-bot {
     border-bottom: 1px solid #ccc;
+    padding-bottom: 0;
 }
 
 // Căn giữa nội dung
