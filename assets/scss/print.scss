@@ -23,65 +23,31 @@ body {
     }
 }
 
-.wraper {
+.wrapper {
     background: #fff;
     margin: 0 auto;
     display: block;
-    width: 1060px;
-}
+    width: 1000px;
 
-/* Tiêu đề */
-.header {
-    .title {
-        font-weight: bold;
-        text-align: center;
-        font-size: 18px;
-        margin-bottom: 15px;
-
-        .header-company {
-            font-weight: normal;
-        }
-    }
-
-    .info-box-row {
-        display: flex;
-        width: 50%;
-        margin-bottom: 15px;
-    }
-
-    .info-item {
-        white-space: nowrap;
-    }
-
-    .info-box-right {
-        margin-left: auto;
-    }
-
-    .info-box-left {
-        margin-bottom: 15px;
-        width: 20%;
-    }
-
-    .row {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
+    @media print {
+        width: auto;
     }
 }
 
-/* Bảng */
-table {
-    border-collapse: collapse;
-    width: 100%;
+/* Viền tùy chỉnh (nếu cần) */
+.bordered {
+    border: 2px solid black;
+}
 
-    th,
-    td {
-        border: 1px solid black;
-    }
+//Viền dưới
+.border-bot {
+    border-bottom: 1px solid #ccc;
+}
 
-    th {
-        background-color: #f2f2f2;
-    }
+// Căn giữa nội dung
+.tex-center {
+    text-align: center;
+    justify-content: center;
 }
 
 /* Container chính */
@@ -94,7 +60,7 @@ table {
     width: 50%;
     text-align: left;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     margin-bottom: 10px;
 }
@@ -109,42 +75,145 @@ table {
 /* Ô nhập liệu */
 .input-field {
     width: 100%;
+    max-width: 100% !important;
     border: none;
     background: transparent;
     font-size: 14px;
     padding: 5px;
-<<<<<<< HEAD
 
     &.border-bot {
+        border-bottom: 1px solid #ccc;
         padding-bottom: 0px;
+
+        @media print {
+            border-bottom: none;
+        }
     }
-=======
-    // &.border-bot {
-    //     padding-bottom: 0;
-    // }
->>>>>>> 4308469 (git)
 }
 
-/* Khoảng cách giữa các phần */
-.spacing {
-    margin-bottom: 15px;
-}
-
-/* Viền tùy chỉnh (nếu cần) */
-.bordered {
-    border: 2px solid black;
-}
-
-//Viền dưới
-.border-bot {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 0;
-}
-
-// Căn giữa nội dung
-.tex-center {
-    text-align: center;
+textarea.input-field {
+    width: 100% !important;
+    height: 22px;
+    line-height: 1em;
+    resize: none;
+    overflow: hidden;
+    padding: 5px 0 0;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+/* Tiêu đề */
+.header {
+
+    /* Định dạng tiêu đề */
+    .title {
+        font-weight: bold;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    /* Định dạng tên công ty trong tiêu đề */
+    .title .header-company {
+        font-weight: normal;
+    }
+
+    /* Hàng chứa thông tin */
+    .info-box-row {
+        display: flex;
+        width: 50%;
+        margin-left: auto;
+
+        .info-item {
+            span {
+                white-space: nowrap;
+            }
+        }
+
+        &.spacing {
+            margin-bottom: 15px;
+        }
+
+        &.left {
+            width: 30%;
+            margin-right: auto;
+        }
+
+        &.right {
+            width: 30%;
+            margin-left: auto;
+        }
+    }
+
+    .info-box-column {
+        display: flex;
+        margin-bottom: 15px;
+        width: 100%;
+        align-items: end;
+        // justify-content: space-between;
+        // align-items: center;
+
+        .info-item {
+            span {
+                white-space: nowrap;
+            }
+
+            .input-field {
+                width: auto;
+            }
+
+            &.left {
+                width: 30%;
+                margin-right: auto;
+            }
+
+            &.right {
+                width: 30%;
+                margin-left: auto;
+            }
+
+        }
+
+        &.spacing {
+            margin-bottom: 15px;
+        }
+    }
+
+    /* Hàng chứa thông tin linh hoạt */
+    .row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    /* Hàng chứa thông tin - hàng ngang bên trái */
+    .column {
+        display: flex;
+        flex-direction: row;
+        /* Chuyển thành dọc */
+        align-items: flex-start;
+        /* Căn trái */
+        margin-bottom: 15px;
+        margin-left: auto;
+    }
+}
+
+
+/* Bảng */
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th,
+    td {
+        border: 1px solid black;
+    }
+
+    .column-head {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
 }
 
 // Phần chữ ký, căn đều hai bên
@@ -158,5 +227,29 @@ table {
 .signature {
     flex: 1;
     padding: 10px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+
+    button {
+        padding: 10px;
+        outline: none;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+}
+
+//xuống dòng
+span {
+    display: block;
+}
+
+.td-container {
+    display: flex;
+    justify-content: center;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px;
 }
