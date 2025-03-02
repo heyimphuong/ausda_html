@@ -133,8 +133,16 @@ textarea.input-field {
     /* Hàng chứa thông tin */
     .info-box-row {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
 
         .info-item {
+            &.between {
+                width: 20%;
+                gap: 5px;
+            }
+
             span {
                 white-space: nowrap;
             }
@@ -148,6 +156,10 @@ textarea.input-field {
             width: 30%;
             margin-left: auto;
         }
+    }
+
+    .no-input {
+        justify-content: center;
     }
 
     .info-box-column {
@@ -269,6 +281,7 @@ table {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    align-items: center;
 }
 
 // Ô chữ ký, chia đều khoảng cách
