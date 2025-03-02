@@ -47,7 +47,14 @@ body {
 // Căn giữa nội dung
 .tex-center {
     text-align: center;
-    justify-content: center;
+
+    button {
+        padding: 10px;
+        outline: none;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        border-radius: 10px;
+    }
 }
 
 /* Container chính */
@@ -112,6 +119,10 @@ textarea.input-field {
         text-align: center;
         font-size: 18px;
         margin-bottom: 15px;
+
+        span {
+            display: block;
+        }
     }
 
     /* Định dạng tên công ty trong tiêu đề */
@@ -122,8 +133,6 @@ textarea.input-field {
     /* Hàng chứa thông tin */
     .info-box-row {
         display: flex;
-        width: 50%;
-        margin-left: auto;
 
         .info-item {
             span {
@@ -133,11 +142,6 @@ textarea.input-field {
 
         &.spacing {
             margin-bottom: 15px;
-        }
-
-        &.left {
-            width: 30%;
-            margin-right: auto;
         }
 
         &.right {
@@ -148,36 +152,42 @@ textarea.input-field {
 
     .info-box-column {
         display: flex;
-        margin-bottom: 15px;
-        width: 100%;
+        justify-content: space-between;
+        /* Đẩy hai phần tử về hai đầu */
         align-items: end;
-        // justify-content: space-between;
-        // align-items: center;
-
-        .info-item {
-            span {
-                white-space: nowrap;
-            }
-
-            .input-field {
-                width: auto;
-            }
-
-            &.left {
-                width: 30%;
-                margin-right: auto;
-            }
-
-            &.right {
-                width: 30%;
-                margin-left: auto;
-            }
-
-        }
+        /* căn xuống dưới */
+        width: 100%;
+        flex-wrap: wrap;
+        /* Đảm bảo không bị tràn màn hình */
 
         &.spacing {
             margin-bottom: 15px;
         }
+    }
+
+    /* Phần tử bên trái */
+    .left-content {
+        display: flex;
+        width: 30px;
+        align-items: end;
+        gap: 5px;
+
+        span {
+            display: block;
+        }
+
+        .input-field {
+            width: auto;
+        }
+    }
+
+    /* Phần tử bên phải */
+    .right-content {
+        flex-shrink: 0;
+        /* Không co lại */
+        text-align: right;
+        white-space: nowrap;
+        /* Đảm bảo không bị xuống dòng */
     }
 
     /* Hàng chứa thông tin linh hoạt */
@@ -208,9 +218,11 @@ table {
     th,
     td {
         border: 1px solid black;
+
         span {
             display: block;
         }
+
         label {
             span {
                 display: inline;
@@ -222,6 +234,34 @@ table {
         background-color: #f2f2f2;
         font-weight: bold;
     }
+
+    .custom-list {
+        list-style-position: inside;
+        /* Đảm bảo dấu số/lớp nằm trong khung */
+        padding-left: 2em;
+        /* Thụt vào một khoảng */
+    }
+
+    .date-time-wrapper {
+        text-align: left;
+        vertical-align: middle;
+
+        .info-box-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            /* Khoảng cách giữa các phần tử */
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            /* Xếp chữ "Ngày tháng" & "Thời gian" xuống dòng */
+            white-space: nowrap;
+        }
+    }
+
 }
 
 // Phần chữ ký, căn đều hai bên
@@ -236,6 +276,10 @@ table {
     flex: 1;
     padding: 10px;
     margin-bottom: 15px;
+
+    span {
+        display: block;
+    }
 
     button {
         padding: 10px;

@@ -7,6 +7,8 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/print.css">
   <title>MẪU BÀN GIAO CÔNG VIỆC</title>
+  <script src="/assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/app.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -17,27 +19,24 @@
           <span>澳世达地材科技有限公司</span>
           <span>CÔNG TY TNHH CÔNG NGHỆ TẤM LÁT SÀN AUSDA</span>
         </div>
-        <div class="header-title">
+        <div>
           <span>工 作 交 接 表</span>
           <span>MẪU BÀN GIAO CÔNG VIỆC</span>
         </div>
       </div>
       <div class="info-box-column spacing">
-        <div class="info-box-row left">
-          <div class="info-item">
-            <span>年/Năm</span>
-          </div>
+        <!-- Phần bên trái -->
+        <div class="info-box-row left-content">
+          <div class="info-item"><span>年/Năm</span></div>
           <input type="text" class="input-field border-bot" value="">
-          <div class="info-item">
-            <span>月/Tháng</span>
-          </div>
+          <div class="info-item"><span>月/Tháng</span></div>
           <input type="text" class="input-field border-bot" value="">
-          <div class="info-item">
-            <span>日/Ngày</span>
-          </div>
+          <div class="info-item"><span>日/Ngày</span></div>
           <input type="text" class="input-field border-bot" value="">
         </div>
-        <div class="info-item right">
+
+        <!-- Phần bên phải -->
+        <div class="info-item right-content">
           <span>ASD-PD-202102180016-A</span>
         </div>
       </div>
@@ -62,39 +61,39 @@
         </td>
       </tr>
       <tr>
-        <td colspan="4" class="pdt10 pdb10">
-          <span>
-            备注： 1. 白班应针对晚班生产状况备足生产所需之物料；
-          </span>
-          <span>
-            2.交接工作务必认真、详细、规范；
-          </span>
-          <span>
-            Ghi chú: 1.Ca ngày cần chuẩn bị đủ nguyên vật liệu sản xuất theo tình hình sản xuất của ca đêm;
-          </span>
-          <span>
-            2.Công tác bàn giao phải nghiêm túc, chi tiết, chuẩn mực.
-          </span>
+      <tr>
+        <td colspan="4" class="pdt10 pdb10 note-text">
+          <span>备注：</span>
+          <div class="custom-list">
+            <span>1. 白班应针对晚班生产状况备足生产所需之物料；</span>
+            <span>2. 交接工作务必认真、详细、规范；</span>
+          </div>
+          <span>Ghi chú:</span>
+          <div class="custom-list">
+            <span>1. Ca ngày cần chuẩn bị đủ nguyên vật liệu sản xuất theo tình hình sản xuất của ca đêm;</span>
+            <span>2. Công tác bàn giao phải nghiêm túc, chi tiết, chuẩn mực.</span>
+          </div>
         </td>
+      </tr>
       </tr>
       <tr>
         <td>
           <span>交接人:</span>
           <span>Người bàn giao:</span>
         </td>
-        <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+        <td class="tex-center"><button onclick="signatureConfirm(this)">Ký 簽名</button></td>
         <td>
           <span>接收人:</span>
           <span>Người tiếp nhận:</span>
         </td>
-        <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+        <td class="tex-center"><button onclick="signatureConfirm(this)">Ký 簽名</button></td>
       </tr>
       <tr>
         <td>
           <span>生产课长:</span>
           <span>Trưởng phòng sản xuất:</span>
         </td>
-        <td colspan="3"><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+        <td colspan="3" class="tex-center"><button onclick="signatureConfirm(this)">Ký 簽名</button></td>
       </tr>
     </table>
   </div>

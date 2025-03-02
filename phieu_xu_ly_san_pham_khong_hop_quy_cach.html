@@ -19,16 +19,16 @@
           <span>澳世达地材科技有限公司</span>
           <span>CÔNG TY TNHH CÔNG NGHỆ TẤM LÁT SÀN AUSDA</span>
         </div>
-        <div class="header-title">
+        <div>
           <span>生产过程不合格品处理信息卡</span>
           <span>PHIẾU THÔNG TIN XỬ LÝ SẢN PHẨM KHÔNG HỢP QUY CÁCH TRONG QUY TRÌNH SẢN XUẤT</span>
         </div>
       </div>
-      <div class="info-box-column">
-        <div class="info-item left">
+      <div class="info-box-column spacing">
+        <div class="info-item">
           <span>ASD-PD-20210218022</span>
         </div>
-        <div class="info-box-row">
+        <div class="info-box-row right">
           <div class="info-item">
             <span>日期:</span>
             <span>Ngày tháng:</span>
@@ -90,27 +90,27 @@
           </td>
           <td colspan="4">
             <div class="td-container">
-              <div class="option">
+              <label class="option">
                 <span>
                   <input type="checkbox">
                   返工
                 </span>
                 <span>Làm lại</span>
-              </div>
-              <div class="option">
+              </label>
+              <label class="option">
                 <span>
                   <input type="checkbox">
                   特裁
                 </span>
                 <span>Cắt bỏ</span>
-              </div>
-              <div class="option">
+              </label>
+              <label class="option">
                 <span>
                   <input type="checkbox">
                   挑出回收
                 </span>
                 <span>Chọn ra và tái chế</span>
-              </div>
+              </label>
             </div>
           </td>
         </tr>
@@ -139,18 +139,26 @@
             <span>返工处理时间</span>
             <span>Thời gian xử lý làm lại</span>
           </td>
-          <td colspan="2" class="">
-            日期：
-            Ngày tháng:
+          <td colspan="2" class="date-time-wrapper">
+            <div class="info-box-row">
+              <div class="info-item">
+                <span>日期:</span>
+                <span>Ngày tháng:</span>
+              </div>
+              <input type="text" class="input-field" value="">
 
-            时间：
-            Thời gian:
+              <div class="info-item">
+                <span>时间:</span>
+                <span>Thời gian:</span>
+              </div>
+              <input type="text" class="input-field" value="">
+            </div>
           </td>
           <td>
             <span>现场确认</span>
             <span>Xác nhận tại hiện trường</span>
           </td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td class="tex-center"><button onclick="signatureConfirm(this)">Ký 簽名</button></td>
         </tr>
         <tr>
           <td class="tex-center">
@@ -179,7 +187,7 @@
             <span>质检员确认</span>
             <span>Nhân viên chất lượng xác nhận</span>
           </td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td class="tex-center"><button onclick="signatureConfirm(this)">Ký 簽名</button></td>
         </tr>
         <tr>
           <td colspan="5" class="pdt10 pdb10">
