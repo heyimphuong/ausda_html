@@ -26,11 +26,15 @@ body {
 .wrapper {
     background: #fff;
     margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: block;
     width: 1000px;
 
     @media print {
         width: auto;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
@@ -130,6 +134,12 @@ textarea.input-field {
         font-weight: normal;
     }
 
+    .title .header-main {
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
     /* Hàng chứa thông tin */
     .info-box-row {
         display: flex;
@@ -219,6 +229,33 @@ textarea.input-field {
         margin-bottom: 15px;
         margin-left: auto;
     }
+
+    .header-info-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+
+        .header-left {
+            width: 60%;
+        }
+
+        .header-right {
+            width: 30%;
+            text-align: right;
+        }
+
+        .header-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .header-label {
+            white-space: nowrap;
+            margin-right: 5px;
+        }
+    }
 }
 
 
@@ -238,6 +275,12 @@ table {
         label {
             span {
                 display: inline;
+            }
+        }
+
+        .btn-sign {
+            @media print {
+                display: none;
             }
         }
     }
@@ -269,11 +312,33 @@ table {
         .info-item {
             display: flex;
             flex-direction: column;
-            /* Xếp chữ "Ngày tháng" & "Thời gian" xuống dòng */
             white-space: nowrap;
         }
     }
 
+}
+
+.custom-table {
+    margin-top: 15px;
+    margin-left: auto;
+    width: auto;
+    border-collapse: collapse;
+}
+
+.custom-table td {
+    border: 1px solid black;
+    width: 50%;
+    /* Chia đôi 111px */
+    height: 40px;
+    text-align: left;
+    vertical-align: top;
+    padding: 2px;
+}
+
+.remark-text {
+    span {
+        display: block;
+    }
 }
 
 // Phần chữ ký, căn đều hai bên
@@ -295,11 +360,43 @@ table {
     }
 
     button {
+        margin-top: 15px;
         padding: 10px;
         outline: none;
         border: 1px solid #ccc;
         cursor: pointer;
         border-radius: 10px;
+
+        @media print {
+            display: none;
+        }
+    }
+}
+
+.stamp-container {
+    width: 205px;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+
+    .title {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .review-section {
+        text-align: left;
+        margin-top: 10px;
+        font-size: 14px;
+
+        .input-field {
+            width: 10%;
+        }
     }
 }
 

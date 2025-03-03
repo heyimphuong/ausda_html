@@ -33,3 +33,13 @@ function countRows(textarea) {
   let count = Math.max(scrollRows, newlineRows); // Chọn số dòng lớn hơn
   return count;
 }
+
+jQuery(document).ready(function ($) {
+  $(window).load(function () {
+    // auto resize textarea onload
+    $("table .input-field").each(function () {
+      autoResize(this);
+    });
+  })
+
+});

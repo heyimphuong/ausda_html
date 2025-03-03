@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIÊN BẢN KIỂM TRA CHẤT LƯỢNG
-    CÔNG ĐOẠN ÉP THUỶ LỰC (GHI CHÉP SỐ ĐO ĐỘ DÀY)</title>
   <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/print.css">
+  <title>Đơn kiểm tra nguyên liệu 查料单</title>
   <script src="/assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
   <script src="/assets/js/app.js" type="text/javascript"></script>
 </head>
@@ -17,224 +16,317 @@
     <div class="header">
       <div class="title">
         <div class="mb10">
+          <span>AUSDA FLOORING TECHNOLOGY CO., LTD</span>
           <span>澳世达地材科技有限公司</span>
-          <span>CÔNG TY TNHH CÔNG NGHỆ TẤM LÁT SÀN AUSDA</span>
         </div>
-        <div>
-          <span>过程质量巡检记录-油压工序 (厚度测量记录)</span>
-          <span>BIÊN BẢN KIỂM TRA CHẤT LƯỢNG</span>
-          <span>CÔNG ĐOẠN ÉP THUỶ LỰC (GHI CHÉP SỐ ĐO ĐỘ DÀY)</span>
+        <div class="header-main">
+          <span>Đơn kiểm tra nguyên liệu 查料单</span>
         </div>
       </div>
-      <div class="info-box-row spacing right">
-        <div class="info-item">
-          <span>班次 Ca:</span>
+      <div class="header-info-container">
+        <div class="header-left">
+          <div class="header-row">
+            <span class="header-label">Khách hàng客户:</span>
+            <input type="text" class="input-field border-bot" value="803">
+          </div>
+          <div class="header-row">
+            <span>Mục đích kiểm tra liệu 查料目的:</span>
+            <input type="text" class="input-field border-bot" value="Đơn hàng 确认买原材料信息">
+          </div>
+          <div class="header-row">
+            <span>Có cần lưu mẫu hay không 是否需保留:</span>
+            <input type="text" class="input-field" value="YES">
+          </div>
         </div>
-        <input type="text" class="input-field border-bot" value="">
-        <div class="info-item">
-          <span>日期 Ngày:</span>
+        <div class="header-right">
+          <div class="header-row">
+            <span class="header-label">Ngày check 查料日期:</span>
+            <input type="text" class="input-field border-bot">
+            <span>45709</span>
+          </div>
         </div>
-        <input type="text" class="input-field border-bot" value="">
       </div>
     </div>
     <div class="container">
       <table>
         <tr>
-          <td rowspan="2" class="tex-center column-head">
-            <span>时间 </span>
-            <span>Thời gian</span>
-          </td>
-          <td rowspan="2" class="tex-center column-head">
-            <span>柜号 </span>
-            <span>Số cont</span>
-          </td>
-          <td rowspan="2" class="tex-center column-head">
-            <span>产编 </span>
+          <td class="tex-center column-head">
             <span>Mã sản phẩm</span>
+            <span>产编</span>
           </td>
-          <td colspan="3" class="column-head">
-            数据记录 Ghi chép số liệu (标准/tiêu chuẩn=0.13mm-0.10mm.
-            同批控制在/Cùng lô khống chế ở mức≤0.15mm.最大/lớn nhất 0.20mm)
+          <td class="column-head" style="width: 30%;">
+            <span>Mã màng phim</span>
+            <span>面料编号</span>
+          </td>
+          <td class="tex-center column-head">
+            <span>Mã vân dập</span>
+            <span>压纹</span>
+          </td>
+          <td class="tex-center column-head">
+            <span>Đóng gói</span>
+            <span>(tấm/hộp)</span>
+            <span>包装</span>
+            <span>(片/盒)</span>
+          </td>
+          <td class="tex-center column-head">
+            <span>Số lượng</span>
+            <span>数量</span>
+            <span>(Hộp 盒)</span>
+          </td>
+          <td class="tex-center column-head">
+            <span>Số lượng</span>
+            <span>cần dùng</span>
+            <span>(m)</span>
+            <span>需用量</span>
+            <span>(米)</span>
+          </td>
+          <td class="tex-center column-head">
+            <span>Tồn kho</span>
+            <span>hiện tại (m)</span>
+            <span>现有库存</span>
+            <span>(米)</span>
+          </td>
+          <td class="tex-center column-head">
+            <span>Lượng dư</span>
+            <span>(m)在途</span>
+            <span>量</span>
+            <span>(米)</span>
+          </td>
+          <td class="tex-center column-head">
+            <span>余量</span>
+            <span>(米)</span>
           </td>
         </tr>
         <tr>
-          <td class="tex-center column-head">左 Trái</td>
-          <td class="tex-center column-head">中 Giữa</td>
-          <td class="tex-center column-head">右 Phải</td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td class="tex-center">
-            <span>贴合度</span>
-            <span>Độ dính</span>
-          </td>
-          <td class="tex-center">
-            <span>面料与中料</span>
-            <span>Liệu mặt, liệu trung</span>
+          <td>
+            <textarea class="input-field bold" oninput="autoResize(this)">803-250001</textarea>
           </td>
           <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td class="tex-center">
-            <span>玻纤</span>
-            <span>Lưới sợi thuỷ tinh</span>
-          </td>
           <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
           <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td class="tex-center">
-            <span>软硬度</span>
-            <span>Độ cứng</span>
-          </td>
-          <td class="tex-center"><span>175 / 110 / 100</span></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
           <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
           <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
           <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
         </tr>
         <tr>
-          <td colspan="7" class="pdt10 pdb10">
-            <span>技术检验要求:厚度检查要求:1.3张以上中底料半成品为重点厚度检测要求.2:架高产品自粘产品.LVT锁扣产品是必须抽查产品。3.每一小时随机抽查一托盘10张半成品。4.测量短边左中右三个点。测量点靠近产品边缘4-10公位置。5.测量数据登记值必须是实际测量值。</span>
-            <span>Yêu cầu kĩ thuật: đo độ dày 3 tấm bán thành phẩm trở lên. 2 Sản phẩm đế cao, sản phẩm tự dính và sản
-              phẩm
-              khóa LVT là những sản phẩm phải được kiểm tra ngẫu nhiên. 3 Kiểm tra ngẫu nhiên một pallet gồm 10 bán
-              thành
-              phẩm mỗi giờ. 4. Đo ba điểm ở bên trái, giữa và bên phải của cạnh ngắn. Điểm đo cách mép sản phẩm 4-10cm.
-              5
-              Giá trị ghi chép dữ liệu đo phải là giá trị đo thực tế.</span>
+          <td>
+            <span>要求交期：ASAP</span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="t_red">包装：12/55/16</span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <span>Quy cách规格:</span>
+          </td>
+          <td>
+            <textarea class="input-field bold"
+              oninput="autoResize(this)">177.8x1219.2mmx5.0mm/0.30mm(4.0mm+1.0mm black IXPE)</textarea>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <label class="bold">EK4321</label>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">12</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">550</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <label class="bold">EK4324</label>
+          </td>
+          <td><textarea class="input-field" oninput="autoResize(this)">CDW-686XL-01</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">12</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">330</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <textarea class="input-field bold" oninput="autoResize(this)">803-250002</textarea>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <span>要求交期：ASAP</span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="t_red">包装：12/55/16</span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <span>Quy cách规格:</span>
+          </td>
+          <td>
+            <textarea class="input-field bold"
+              oninput="autoResize(this)">177.8x1219.2mmx5.0mm/0.30mm(4.0mm+1.0mm black IXPE)</textarea>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <label class="bold">EK4324</label>
+          </td>
+          <td><textarea class="input-field" oninput="autoResize(this)">CDW-686XL-01</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">MFH</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">12</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">110</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <label class="bold">EK4325</label>
+          </td>
+          <td><textarea class="input-field" oninput="autoResize(this)">TWG-12231-1</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">MFH</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">12</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">385</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <label class="bold">EK4326</label>
+          </td>
+          <td><textarea class="input-field" oninput="autoResize(this)">TW-7301-8</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">MFH</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">12</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">165</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <label class="bold">EK4328</label>
+          </td>
+          <td><textarea class="input-field" oninput="autoResize(this)">TWG-13321-D32(A)</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">MFH</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">12</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)">220</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field bold" oninput="autoResize(this)">总</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center bold" oninput="autoResize(this)">1760</textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="9" class="pdt10 pdb10">
+            <span>Lưu ý: Vui lòng kiểm tra chất liệu và trả lời ngày giao hàng nhanh nhất, nếu chưa có đủ thì hãy mua
+              nguyên liệu trước. </span>
+            <span>备注: 请查料并回复最快交期，不够先买料。</span>
           </td>
         </tr>
       </table>
     </div>
-    <div class="signature-section">
+    <div class="signature-section pdt18">
       <div class="signature">
-        <div class="spacing">
-          <span>质量主管:</span>
-          <span>Chủ quản chất lượng</span>
+        <div>
+          <span class="bold">Phê chuẩn审核:</span>
         </div>
         <button>Ký 簽名</button>
       </div>
       <div class="signature">
-        <div class="spacing">
-          <span>生产组长:</span>
-          <span>Tổ trưởng sản xuất</span>
+        <div>
+          <span class="bold">Kinh doanh业务:</span>
         </div>
         <button>Ký 簽名</button>
       </div>
       <div class="signature">
-        <div class="spacing">
-          <span>发料员:</span>
-          <span>Người phát liệu</span>
+        <div>
+          <span class="bold">Bel</span>
+        </div>
+        <button>Ký 簽名</button>
+      </div>
+      <div class="signature">
+        <div>
+          <span class="bold">Phản hồi nguyên vật liệu物料反馈：</span>
         </div>
         <button>Ký 簽名</button>
       </div>
