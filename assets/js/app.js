@@ -41,5 +41,4 @@ jQuery(document).ready(function ($) {
       autoResize(this);
     });
   })
-
 });

@@ -288,6 +288,12 @@ table {
     .column-head {
         background-color: #f2f2f2;
         font-weight: bold;
+        white-space: nowrap;
+    }
+
+    column-head-landscape {
+        background-color: #f2f2f2;
+        font-weight: bold;
     }
 
     .custom-list {
