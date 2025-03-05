@@ -38,6 +38,12 @@ body {
     }
 }
 
+/* Đảm bảo không bị xuống dòng */
+.no-wrap {
+    white-space: nowrap;
+}
+
+
 /* Viền tùy chỉnh (nếu cần) */
 .bordered {
     border: 2px solid black;
@@ -68,7 +74,7 @@ button {
 /* Container chính */
 .container {
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
 
     .article-commodity-detail {
         display: block;
@@ -120,6 +126,7 @@ button {
     background: transparent;
     font-size: 14px;
     padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
 
     &.border-bot {
         border-bottom: 1px solid #ccc;
@@ -410,6 +417,11 @@ table {
     }
 }
 
+.signature-container { 
+    margin-left: 50%;
+    text-align: center;
+  }
+  
 // Phần chữ ký, căn đều hai bên
 .signature-section {
     display: flex;
@@ -478,4 +490,83 @@ table {
     display: flex;
     flex-direction: column;
     padding: 0 35px;
+}
+
+/* Ẩn viền theo từng hướng */
+.border-none {
+    border: none;
+}
+
+.border-left-none {
+    border-left: none;
+}
+
+.border-right-none {
+    border-right: none;
+}
+
+.border-top-none {
+    border-top: none;
+}
+
+.border-bottom-none {
+    border-bottom: none;
+}
+
+.border-x-none {
+    border-left: none;
+    border-right: none;
+}
+
+.border-y-none {
+    border-top: none;
+    border-bottom: none;
+}
+
+.border-top-left-none {
+    border-top: none;
+    border-left: none;
+}
+
+.border-top-right-none {
+    border-top: none;
+    border-right: none;
+}
+
+.border-bottom-left-none {
+    border-bottom: none;
+    border-left: none;
+}
+
+.border-bottom-right-none {
+    border-bottom: none;
+    border-right: none;
+}
+
+.border-top-left-right-none {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.border-bottom-left-right-none {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.border-bottom-top-right-none {
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+}
+
+.border-bottom-top-left-none {
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+}
+
+.border {
+    border: 0;
 }
