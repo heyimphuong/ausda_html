@@ -164,6 +164,19 @@ textarea.input-field {
         }
     }
 
+    .title .no-wrap {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
     /* Tiêu đề có img*/
     .title .header-img {
         display: flex;
@@ -416,11 +429,11 @@ table {
     }
 }
 
-.signature-container { 
+.signature-container {
     margin-left: 50%;
     text-align: center;
-  }
-  
+}
+
 // Phần chữ ký, căn đều hai bên
 .signature-section {
     display: flex;
