@@ -254,6 +254,14 @@ textarea.input-field {
         flex-wrap: wrap;
         /* Đảm bảo không bị tràn màn hình */
 
+        .info-item {
+            display: flex;
+
+            span {
+                display: block;
+            }
+        }
+
         &.spacing {
             margin-bottom: 15px;
         }
@@ -365,6 +373,27 @@ table {
                 display: none;
             }
         }
+    }
+
+    .checkbox-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .checkbox-group {
+        display: flex;
+        justify-content: space-between;
+        /* Căn đều các checkbox */
+        width: 100%;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        /* Khoảng cách giữa checkbox và chữ */
+        white-space: nowrap;
+        /* Giữ chữ không bị xuống dòng */
     }
 
     .column-head {

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/print.css">
+  <title>Phiếu lưu trình quy trình sản xuất</title>
+  <script src="/assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/app.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="title">
+        <div class="mb10">
+          <span>澳世达地材科技有限公司</span>
+          <span>CÔNG TY TNHH CÔNG NGHỆ TẤM LÁT SÀN AUSDA</span>
+        </div>
+        <div>
+          <span>工序生产流程卡</span>
+          <span>Phiếu lưu trình quy trình sản xuất</span>
+        </div>
+      </div>
+      <div class="info-box-column no-wrap mb15">
+        <div class="info-item w-30">
+          <div class="w-30">
+            <span>
+              共 板
+            </span>
+            <span>
+              Tổng
+              <input type="text" class="input-field border-bot w-5" value="">
+              bản
+            </span>
+          </div>
+          <div class="w-20">
+            <span>
+              第 板
+            </span>
+            <span>
+              Bản thứ
+              <input type="text" class="input-field border-bot w-5" value="">
+            </span>
+          </div>
+        </div>
+        <div class="info-item w-50">
+          <div class="no-wrap">
+            <span> 班次:</span>
+            <span> Ca:</span>
+          </div>
+          <input type="text" class="input-field border-bot w-10" value="">
+          <div class="no-wrap">
+            <span>日期:</span>
+            <span>Ngày:</span>
+          </div>
+          <input type="text" class="input-field border-bot w-10" value="">
+          <div class="no-wrap">
+            <span>年:</span>
+            <span>năm:</span>
+          </div>
+          <input type="text" class="input-field border-bot w-5" value="">
+          <div class="no-wrap">
+            <span>月:</span>
+            <span>tháng:</span>
+          </div>
+          <input type="text" class="input-field border-bot w-5" value="">
+          <div class="no-wrap">
+            <span>日:</span>
+            <span>ngày:</span>
+          </div>
+          <input type="text" class="input-field border-bot w-5" value="">
+        </div>
+        <div class="info-item w-20">
+          <span>ASD-PD-20210218011-A</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <table>
+        <tr>
+          <td class="tex-center column-head-landscape">
+            <span>订单号</span>
+            <span>Số đơn hàng</span>
+          </td>
+          <td class="tex-center column-head-landscape">
+            <span>产品编号</span>
+            <span>Mã sản phẩm</span>
+          </td>
+          <td class="tex-center column-head-landscape">
+            <span>多片锯规格</span>
+            <span>Quy cách cưa đa lưỡi</span>
+          </td>
+          <td class="tex-center column-head-landscape">
+            <span>成品尺寸规格</span>
+            <span>Quy cách, kích thước</span>
+            <span>thành phẩm</span>
+          </td>
+          <td class="tex-center column-head-landscape">
+            <span>面料编号</span>
+            <span>Mã film màu</span>
+          </td>
+          <td colspan="2" class="tex-center column-head-landscape">
+            <span>面料批号</span>
+            <span>Số lô film màu</span>
+          </td>
+          <td class="tex-center column-head-landscape">
+            <span>透明料 mm</span>
+            <span>Film trong mm</span>
+          </td>
+          <td colspan="2" class="tex-center column-head-landscape">
+            <span>透明料批号</span>
+            <span>Số lô film trong</span>
+          </td>
+          <td class="tex-center column-head-landscape">
+            <span>生产数量</span>
+            <span>Số lượng sản xuất</span>
+          </td>
+          <td class="tex-center column-head-landscape">
+            <span>生产时间</span>
+            <span>Thời gian sản xuất</span>
+          </td>
+          <td class="tex-center column-head-landscape">
+            <span>操作员</span>
+            <span>Người thao tác</span>
+          </td>
+          <td class="tex-center column-head-landscape">
+            <span>质检确认</span>
+            <span>Xác nhận kiểm tra</span>
+          </td>
+          <td class="tex-center column-head-landscape">
+            <span>备注</span>
+            <span>Ghi chú</span>
+          </td>
+        </tr>
+        <tr>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td colspan="2"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td colspan="2"><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="4"><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="4"><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="4"><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="4"><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="4"><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td rowspan="3" class="tex-center">
+            <span>挤出工序</span>
+            <span>Quy trình đùn</span>
+          </td>
+          <td colspan="9">
+            <div class="checkbox-container">
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox">
+                  <span>干底</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>常规背胶</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>贴IXPE</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>贴无纺布背胶</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>贴软木</span>
+                </label>
+              </div>
+              <div class="checkbox-group">
+                <label><input type="checkbox">
+                  <span>Đế khô</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Keo dán thông thường</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Dán IXPE</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Dán vải không dệt</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Dán gỗ mềm</span>
+                </label>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>硬板生产批号：</span>
+            <span>Số lô sản xuất bản cứng </span>
+          </td>
+          <td colspan="2"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td class="tex-center">
+            <span>中料批号：</span>
+            <span>Số lô vật liệu trung gian </span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td class="tex-center">
+            <span>底料批号：</span>
+            <span>Số lô liệu đế </span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td class="tex-center">
+            <span>玻纤批号：</span>
+            <span>Số lô sợi thủy tinh</span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>PET批号：</span>
+            <span>Số lô PET</span>
+          </td>
+          <td colspan="2"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td class="tex-center">
+            <span>软膜批号：</span>
+            <span>Số lô màng mềm</span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td colspan="2" class="tex-center">
+            <span>纳米玻纤布批号：</span>
+            <span>Số lô vải sợi thủy tinh nano</span>
+          </td>
+          <td colspan="2"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td rowspan="14" class="tex-center">
+            <span>生产加工工序填写</span>
+            <span>Điền quy trình gia công sản xuất</span>
+          </td>
+          <td colspan="9" class="tex-center">
+            <span>淋膜回火工序/ Quy trình sơn phủ - Ủ</span>
+          </td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>底漆型号</span>
+            <span>Model sơn lót</span>
+          </td>
+          <td colspan="2"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td class="tex-center">
+            <span>面漆型号</span>
+            <span>Model sơn mặt</span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td class="tex-center">
+            <span>底漆批号</span>
+            <span>Số lô sơn lót </span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td class="tex-center">
+            <span>底漆批号</span>
+            <span>Số lô sơn mặt </span>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="9">
+            <div class="checkbox-container">
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox">
+                  <span>全雾淋膜</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>半雾淋膜</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>超雾淋膜 </span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>全雾辊砂</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>半雾辊砂</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>超雾辊砂</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>防污涂料淋膜</span>
+                </label>
+              </div>
+              <div class="checkbox-group">
+                <label><input type="checkbox">
+                  <span>Sơn phủ nhám toàn bộ</span>
+                </label>
+                <label><input type="checkbox">
+                  <span> Sơn phủ bán nhám</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Sơn phủ siêu nhám</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Trục cát nhám toàn bộ</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Trục cát bán nhám</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Trục cát siêu nhám</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Màng phủ chống bẩn</span>
+                </label>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>多片锯工序</span>
+            <span>Quy trình cưa đa lưỡi</span>
+          </td>
+          <td colspan="8">
+            <div class="checkbox-container">
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox">
+                  <span>成型方向同长边平行</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>成型方向同短边平行</span>
+                </label>
+              </div>
+              <div class="checkbox-group">
+                <label><input type="checkbox">
+                  <span>Hướng tạo hình song song với cạnh dài</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Hướng tạo hình song song với cạnh ngắn</span>
+                </label>
+              </div>
+            </div>
+          </td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="9" class="tex-center">
+            <span>刻槽工序/ Quy trình tạo rãnh </span>
+          </td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>扣型要求</span>
+            <span>Yêu cầu loại khóa</span>
+          </td>
+          <td colspan="8">
+            <div class="checkbox-container">
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox">
+                  <span>瓦林格扣</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>I4F扣型 </span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span> uniclic扣</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>直落扣型</span>
+                </label>
+              </div>
+              <div class="checkbox-group">
+                <label><input type="checkbox">
+                  <span>Khóa nút warin</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Khóa I4F</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Khóa uniclic</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Khóa thẳng</span>
+                </label>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>导角要求</span>
+            <span>Yêu cầu vát mép</span>
+          </td>
+          <td colspan="8">
+            <div class="checkbox-container">
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox">
+                  <span>小导角</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>正常导角</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>宽导角</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>导到底料</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>不导角</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>25度倒角</span>
+                </label>
+              </div>
+              <div class="checkbox-group">
+                <label><input type="checkbox">
+                  <span>Vát mép nhỏ</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Vát mép thông thường</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Vát mép rộng</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Vát đến liệu đế</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Không vát mép</span>
+                </label>
+                <label><input type="checkbox">
+                  <span>Vát góc 25°</span>
+                </label>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>背贴工序</span>
+            <span>Quy trình dán mặt lưng</span>
+          </td>
+          <td colspan="4" class="tex-center">
+            <span>IXPE.无纺布.软木物料批号:</span>
+            <span>Số lô gỗ mềm, vải không dệt, bông IXPE</span>
+          </td>
+          <td colspan="4"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>涂油工序</span>
+            <span>Quy trình bôi sơn mép</span>
+          </td>
+          <td class="tex-center">
+            <span>水性油漆批号</span>
+            <span>Số lô sơn gốc nước</span>
+          </td>
+          <td colspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td class="tex-center">
+            <span>涂油宽度</span>
+            <span>Chiều rộng bôi sơn</span>
+          </td>
+          <td colspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="9" class="tex-center">
+            <span>背胶包装工序/ Quy trình dán mặt lưng - Đóng hộp</span>
+          </td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="3"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>纸盒编号</span>
+            <span>Mã thùng carton</span>
+          </td>
+          <td colspan="2">
+            <textarea class="input-field tex-center" oninput="autoResize(this)"></textarea>
+          </td>
+          <td class="tex-center">
+            <span>栈板尺寸</span>
+            <span>Kích thước pallet</span>
+          </td>
+          <td colspan="2">
+            <textarea class="input-field tex-center" oninput="autoResize(this)"></textarea>
+          </td>
+          <td class="tex-center">
+            <span>包装件号</span>
+            <span>Số kiện đóng gói</span>
+          </td>
+          <td colspan="2">
+            <textarea class="input-field tex-center" oninput="autoResize(this)"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>热熔胶批号</span>
+            <span>Số lô keo nóng chảy</span>
+          </td>
+          <td colspan="2">
+            <textarea class="input-field tex-center" oninput="autoResize(this)"></textarea>
+          </td>
+          <td class="tex-center">
+            <span>热熔胶型号</span>
+            <span>Loại keo nóng chảy</span>
+          </td>
+          <td colspan="2">
+            <textarea class="input-field tex-center" oninput="autoResize(this)"></textarea>
+          </td>
+          <td class="tex-center">
+            <span>离型纸批号</span>
+            <span>Số lô giấy phát hành</span>
+          </td>
+          <td colspan="2">
+            <textarea class="input-field tex-center" oninput="autoResize(this)"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9" class="tex-center">
+            <span>品检包装工序/ Quy trình kiểm tra chất lượng - Đóng gói</span>
+          </td>
+          <td rowspan="2"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="2"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="2"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="2"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          <td rowspan="2"><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+        </tr>
+        <tr>
+          <td class="tex-center">
+            <span>纸盒编号</span>
+            <span>Mã thùng carton</span>
+          </td>
+          <td colspan="2">
+            <textarea class="input-field tex-center" oninput="autoResize(this)"></textarea>
+          </td>
+          <td class="tex-center">
+            <span>栈板尺寸</span>
+            <span>Kích thước pallet</span>
+          </td>
+          <td colspan="2">
+            <textarea class="input-field tex-center" oninput="autoResize(this)"></textarea>
+          </td>
+          <td class="tex-center">
+            <span>包装件号</span>
+            <span>Số kiện đóng gói</span>
+          </td>
+          <td colspan="2">
+            <textarea class="input-field tex-center" oninput="autoResize(this)"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="15" class="pdt10 pdb10">
+            <span>备注：不同批次不可混放在一起.必须区分单独栈板放置.每工序生产都必须由生产者以及质检进行签字确认.确认内容包括生产数量及生产品质.严禁将此卡混放.一板一卡.生产过程中严禁将此卡遗失.遗失补卡追究相关工序责任.此卡由生产部门品包组负责保存一年.一年后可回收.大货使用白色流程卡.追加使用为黄色流程卡.特殊特急订单插单使用红色流程卡.</span>
+            <span>Ghi chú: Không cùng lô không được để cùng nhau. Bắt buộc phải phân  khu riêng biệt vị trí để pallet. Mỗi quy trình sản xuất phải do của nhà sản xuất và kiểm tra chất lượng  ký và xác nhận.  nội dung xác nhận bao gồm số lượng và chất lượng sản xuất. không  xáo trộn phiếu này. Trong quá trình sản xuất cấm làm mất phiếu này.Nếu thẻ thay thế bị mất thì truy cứu trách nhiệm của quy trình phụ trách. Thẻ này do bộ phận sản xuất và đóng gói sản phẩm lưu giữ trong vòng một năm.  Một năm sau mới có thể tái chế. Hàng  số lượng lớn sử dụng thẻ  màu trắng. Đơn hàng bổ sung dùng thẻ lưu trình màu vàng. Đơn hàng đặc biệt gấp dùng thẻ màu đỏ</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
