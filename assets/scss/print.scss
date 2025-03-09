@@ -235,8 +235,13 @@ textarea.input-field {
         }
 
         &.right {
+            gap: 5px;
             width: 30%;
             margin-left: auto;
+        }
+
+        &.w-50 {
+            width: 50% !important;
         }
     }
 
@@ -255,6 +260,7 @@ textarea.input-field {
         /* Đảm bảo không bị tràn màn hình */
 
         .info-item {
+            gap: 5px;
             display: flex;
 
             span {
