@@ -58,6 +58,10 @@ body {
     text-align: center;
 }
 
+.font11 {
+    font-size: 11px;
+}
+
 button {
     padding: 10px;
     outline: none;
@@ -151,6 +155,9 @@ textarea.input-field {
 
 /* Tiêu đề */
 .header {
+    span {
+        display: block;
+    }
 
     /* Định dạng tiêu đề */
     .title {
@@ -162,6 +169,11 @@ textarea.input-field {
         span {
             display: block;
         }
+
+        &.info-box-column {
+            margin-bottom: 0;
+        }
+
     }
 
     .title .no-wrap {
@@ -175,6 +187,10 @@ textarea.input-field {
             align-items: center;
             gap: 5px;
         }
+    }
+
+    .title .title_tag {
+        font-weight: normal;
     }
 
     /* Tiêu đề có img*/
