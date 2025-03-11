@@ -126,21 +126,82 @@
           <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
         </tr>
         <tr>
-          <td colspan="3" class="border-bottom-right-none"></td>
-          <td colspan="3" class="tex-center border-bottom-left-none">
+          <td colspan="3" class="border-right-none"></td>
+          <td class="border-x-none">
+            <span> 供应商确认:</span>
+            <span> Nhà cung cấp xác nhận:</span>
+          </td>
+          <td colspan="2" class="border-left-none">
             <button onclick="signatureConfirm(this)">Ký 簽名</button>
           </td>
         </tr>
         <tr>
-          <td colspan="3" class="border-top-right-none"></td>
-          <td colspan="3" class="border-top-left-none">
-            <span> 供应商确认:</span>
-            <span> Nhà cung cấp xác nhận:</span>
+          <td class="border-bottom-right-none">
+            <span>退货原因：Nguyên nhân trả lại ： </span>
+          </td>
+          <td colspan="2" rowspan="2" class="border-x-none">
+            <textarea class="input-field" oninput="autoResize(this)">不对订单规格/ Không đúng quy cách đã đặt</textarea>
+          </td>
+          <td colspan="3" class="border-bottom-left-none"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="border-top-right-none"></td>
+          <td class="border-top-left-right-none">
+            <span>IQC:</span>
+          </td>
+          <td colspan="2" class="border-top-left-none">
+            <button onclick="signatureConfirm(this)">Ký 簽名</button>
           </td>
         </tr>
         <tr>
-          <td colspan="6">
-            <span>退货原因：Nguyên nhân trả lại ：   不对订单规格/ Không đúng quy cách đã đặt</span>
+          <td colspan="6" class="border-bottom-none">
+            <span>质检课意见：Ý kiến Trưởng bộ phận chất lượng:</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="6" class="border-y-none">
+            <textarea class="input-field" oninput="autoResize(this)"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="border-top-right-none"></td>
+          <td class="border-top-left-right-none">
+            <span>质检课长：</span>
+            <span>Trưởng bộ phận chất lượng:</span>
+          </td>
+          <td colspan="3" class="border-top-left-none">
+            <button onclick="signatureConfirm(this)">Ký 簽名</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="border-right-none">
+            <span>资材意见：</span>
+            <span>Ý kiến phòng vật tư: </span>
+          </td>
+          <td colspan="5" class="border-left-none">
+            <textarea class="input-field" oninput="autoResize(this)"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td class="border-right-none">
+            <span>资材课长：</span>
+            <span>Trưởng bộ phận vật tư:</span>
+          </td>
+          <td colspan="2" class="border-x-none">
+            <button onclick="signatureConfirm(this)">Ký 簽名</button>
+          </td>
+          <td class="border-x-none">
+            <span>仓管：</span>
+            <span>Quản lý kho:</span>
+          </td>
+          <td colspan="2" class="border-left-none">
+            <button onclick="signatureConfirm(this)">Ký 簽名</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="6" class="pdt10 pdb10">
+            <span>备注：仓库及时把需要退货的原材料型号及其数量将原材料存放在指定区域.不可随意摆放.不可将不良品与良品混放</span>
+            <span>Ghi chú: Bộ phận kho kịp thời lấy loại hình nguyên vật liệu nguyên kiện và số lượng cần trả trong khu vực quy định, không được đặt tùy ý, không trộn lẫn hàng lỗi với hàng tốt</span>
           </td>
         </tr>
       </table>
