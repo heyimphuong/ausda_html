@@ -41,6 +41,10 @@ body {
 /* Đảm bảo không bị xuống dòng */
 .no-wrap {
     white-space: nowrap;
+
+    span {
+        display: inline;
+    }
 }
 
 /* Viền tùy chỉnh (nếu cần) */
@@ -244,7 +248,7 @@ textarea.input-field {
 
         &.right {
             gap: 5px;
-            width: 30%;
+            width: 20%;
             margin-left: auto;
         }
 
@@ -624,6 +628,10 @@ table {
 
 .border {
     border: 0;
+}
+
+.w-0 {
+    width: 0;
 }
 
 .w-2 {
