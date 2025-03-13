@@ -29,33 +29,25 @@ body {
 
 /* Thanh Tab Bar */
 .tabbar {
-    margin-top: 50px;
-    display: flex;
-    background-color: #FF4954;
+    background-color: #BBBBBB;
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1000;
-    padding: 10px;
-    gap: 10px;
-}
-
-.tabbar button {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    background-color: #fff;
-    color: #FF4954;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.tabbar button:hover {
-    background-color: #a9111a;
-    color: white;
+    z-index: 999;
+    padding: 5px 0;
+    button {
+        padding: 10px;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background 0.3s, color 0.3s;
+        margin-left: 10px;
+        &:hover {
+            background-color: #666666;
+            color: white;
+        }
+    }
 }
 
 .wrapper {
@@ -65,6 +57,16 @@ body {
     padding-bottom: 15px;
     display: block;
     width: 1000px;
+
+    &.horizontal {
+        width: calc(100% - 20px);
+
+        @media print {
+            width: auto;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
 
     @media print {
         width: auto;
@@ -221,43 +223,38 @@ textarea.input-field {
         }
     }
 
-    .title .title_tag {
-        font-weight: normal;
-    }
-
-    /* Tiêu đề có img*/
-    .title .header-img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 9px solid #52D1D1;
-
-        img {
-            width: 100px;
-            /* Chỉnh kích thước logo */
-            margin-right: 20px;
+    .title {
+        .title_tag {
+            font-weight: normal;
         }
-    }
-
-
-    /* Định dạng tên công ty trong tiêu đề */
-    .title .header-company {
-        font-weight: normal;
-    }
-
-    .title .header-main {
-        font-weight: bold;
-        font-size: 20px;
-
-        &.text-decoration {
-            text-decoration: underline;
+        .header-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 9px solid #52D1D1;
+    
+            img {
+                width: 100px;
+                /* Chỉnh kích thước logo */
+                margin-right: 20px;
+            }
         }
-    }
-
-    .title .header-content {
-        font-weight: normal;
-        font-size: 14px;
-        padding-bottom: 10px;
+        .header-company {
+            font-weight: normal;
+        }
+        .header-main {
+            font-weight: bold;
+            font-size: 20px;
+    
+            &.text-decoration {
+                text-decoration: underline;
+            }
+        }
+        .header-content {
+            font-weight: normal;
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
     }
 
     /* Hàng chứa thông tin */
@@ -431,12 +428,12 @@ table {
     }
 
     tr:hover {
-        background-color: #f8d7da !important;
+        background-color: #DDDDDD !important;
         cursor: pointer;
     }
 
     tr.selected {
-        background-color: #ffa07a !important;
+        background-color: #CCCCCC !important;
     }
 
     .checkbox-container {
@@ -497,23 +494,21 @@ table {
         }
     }
 
-}
-
-.custom-table {
-    margin-top: 15px;
-    margin-left: auto;
-    width: auto;
-    border-collapse: collapse;
-}
-
-.custom-table td {
-    border: 1px solid black;
-    width: 50%;
-    /* Chia đôi 111px */
-    height: 40px;
-    text-align: left;
-    vertical-align: top;
-    padding: 2px;
+    &.custom-table {
+        margin-top: 15px;
+        margin-left: auto;
+        width: auto;
+        border-collapse: collapse;
+        td {
+            border: 1px solid black;
+            width: 50%;
+            /* Chia đôi 111px */
+            height: 40px;
+            text-align: left;
+            vertical-align: top;
+            padding: 2px;
+        }
+    }
 }
 
 .remark-text {
@@ -533,28 +528,27 @@ table {
     justify-content: space-between;
     text-align: center;
     align-items: center;
-}
 
-// Ô chữ ký, chia đều khoảng cách
-.signature {
-    flex: 1;
-    padding: 10px;
-    margin-bottom: 15px;
-
-    span {
-        display: block;
-    }
-
-    button {
-        margin-top: 15px;
+    .signature {
+        flex: 1;
         padding: 10px;
-        outline: none;
-        border: 1px solid #ccc;
-        cursor: pointer;
-        border-radius: 10px;
-
-        @media print {
-            display: none;
+        margin-bottom: 15px;
+    
+        span {
+            display: block;
+        }
+    
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            outline: none;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 10px;
+    
+            @media print {
+                display: none;
+            }
         }
     }
 }

@@ -57,19 +57,26 @@ $(document).ready(function () {
     });
   }
 
-  // Thêm dòng mới
   $("#addRow").click(function () {
-    var columnCount = $("#dataTable thead tr th").length - 1; // Trừ đi cột STT
-    var newRow = "<tr><td class='stt'></td>";
-
-    for (var i = 0; i < columnCount; i++) {
-      newRow += `<td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>`;
+    var lastRow = $("#dataTable tbody tr:last"); // Lấy hàng cuối cùng
+    if (lastRow.length === 0) {
+      alert("Không có dòng nào để sao chép!");
+      return;
     }
 
-    newRow += "</tr>";
-    $("#dataTable tbody").append(newRow);
-    updateSTT();
+    var newRow = lastRow.clone(); // Clone hàng cuối cùng
+
+    // Xóa nội dung trong các textarea của hàng mới
+    newRow.find("textarea").val("");
+
+    // Đặt STT về rỗng để cập nhật lại sau
+    newRow.find(".stt").text("");
+
+    $("#dataTable tbody").append(newRow); // Thêm vào bảng
+
+    updateSTT(); // Cập nhật lại số thứ tự
   });
+
 
   // Chọn / bỏ chọn hàng khi click
   $("#dataTable").on("click", "tr", function () {
@@ -98,30 +105,7 @@ $(document).ready(function () {
     window.location.href = "http://localhost:3000/";
   });
 
-  // In dọc
-  $("#printPortrait").click(function () {
-    printWithOrientation("portrait");
+  $("#printPage").click(function () {
+    window.print(); // Gọi in trực tiếp
   });
-
-  // In ngang
-  $("#printLandscape").click(function () {
-    printWithOrientation("landscape");
-  });
-
-  // Hàm xử lý in với tùy chọn orientation (dọc hoặc ngang)
-  function printWithOrientation(orientation) {
-    var printStyle = `
-                <style>
-                    @page {
-                        size: ${orientation};
-                    }
-                </style>
-            `;
-    var printWindow = window.open("", "_blank");
-    printWindow.document.write(printStyle + document.body.innerHTML);
-    printWindow.document.close();
-    printWindow.focus();
-    printWindow.print();
-    printWindow.close();
-  }
 });

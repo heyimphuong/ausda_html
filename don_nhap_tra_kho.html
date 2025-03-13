@@ -12,303 +12,305 @@
 </head>
 
 <body>
-  <div class="tabbar">
-    <button id="goBack">Quay lại</button>
-    <button id="addRow">Thêm dòng</button>
-    <button id="deleteRow">Xóa dòng</button>
-    <button id="printPortrait">In dọc</button>
-    <button id="printLandscape">In ngang</button>
-  </div>
+  <div >
+    <div class="tabbar">
+      <button id="goBack">Quay lại 返回</button>
+      <button id="addRow">Thêm dòng 添加行</button>
+      <button id="deleteRow">Xóa dòng 删除行</button>
+      <button id="printPage">In 打印</button>
+    </div>
 
-  <div class="wrapper">
-    <div class="header">
-      <div class="title">
-        <div class="mb10">
-          <span>澳世达地材科技有限公司</span>
-          <span>CÔNG TY TNHH CÔNG NGHỆ TẤM LÁT SÀN AUSDA</span>
-        </div>
-        <div class="header-company">
-          <span>入/退库单</span>
-          <span>ĐƠN NHẬP/TRẢ KHO</span>
-        </div>
-      </div>
-      <div class="info-box-column spacing">
-        <div class="info-item">
-          <div class="no-wrap">
-            <span>Số Đơn:
-              <input type="text" class="input-field border-bot w-60" value="20240101-02">
-            </span>
+    <div class="wrapper">
+      <div class="header">
+        <div class="title">
+          <div class="mb10">
+            <span>澳世达地材科技有限公司</span>
+            <span>CÔNG TY TNHH CÔNG NGHỆ TẤM LÁT SÀN AUSDA</span>
+          </div>
+          <div class="header-company">
+            <span>入/退库单</span>
+            <span>ĐƠN NHẬP/TRẢ KHO</span>
           </div>
         </div>
-        <div class="info-item">
-          <span>ASD-WH-20210218005-A</span>
+        <div class="info-box-column spacing">
+          <div class="info-item">
+            <div class="no-wrap">
+              <span>Số Đơn:
+                <input type="text" class="input-field border-bot w-60" value="20240101-02">
+              </span>
+            </div>
+          </div>
+          <div class="info-item">
+            <span>ASD-WH-20210218005-A</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <table id="dataTable">
-        <thead>
+      <div class="container">
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th class="tex-center column-head">
+                <span>序号</span>
+                <span>STT</span>
+              </th>
+              <th class="tex-center column-head">
+                <span>日期</span>
+                <span>Ngày nhập/trả kho</span>
+              </th>
+              <th class="tex-center column-head">
+                <span>物料代码</span>
+                <span>Mã vật tư</span>
+              </th>
+              <th class="tex-center column-head">
+                <span>品名</span>
+                <span>Tên sản phẩm</span>
+              </th>
+              <th class="tex-center column-head">
+                <span>型号规格</span>
+                <span>Chủng loại, quy cách</span>
+              </th>
+              <th class="tex-center column-head">
+                <span>单位</span>
+                <span>Đơn vị</span>
+              </th>
+              <th class="tex-center column-head">
+                <span>入/退库数量</span>
+                <span>Số lượng nhập/trả kho</span>
+              </th>
+              <th class="tex-center column-head">
+                <span>实际入/退库数量</span>
+                <span>Số lượng nhập/trả kho thực tế</span>
+              </th>
+              <th class="tex-center column-head">
+                <span>备注</span>
+                <span>Ghi chú</span>
+              </th>
+            </tr>
+          </thead>
           <tr>
-            <th class="tex-center column-head">
-              <span>序号</span>
-              <span>STT</span>
-            </th>
-            <th class="tex-center column-head">
-              <span>日期</span>
-              <span>Ngày nhập/trả kho</span>
-            </th>
-            <th class="tex-center column-head">
-              <span>物料代码</span>
-              <span>Mã vật tư</span>
-            </th>
-            <th class="tex-center column-head">
-              <span>品名</span>
-              <span>Tên sản phẩm</span>
-            </th>
-            <th class="tex-center column-head">
-              <span>型号规格</span>
-              <span>Chủng loại, quy cách</span>
-            </th>
-            <th class="tex-center column-head">
-              <span>单位</span>
-              <span>Đơn vị</span>
-            </th>
-            <th class="tex-center column-head">
-              <span>入/退库数量</span>
-              <span>Số lượng nhập/trả kho</span>
-            </th>
-            <th class="tex-center column-head">
-              <span>实际入/退库数量</span>
-              <span>Số lượng nhập/trả kho thực tế</span>
-            </th>
-            <th class="tex-center column-head">
-              <span>备注</span>
-              <span>Ghi chú</span>
-            </th>
-          </tr>
-        </thead>
-        <tr>
-          <td class="stt">1</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">IXPE 454x1.0/18倍(有底纹,黑色)</textarea>
-          </td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">2270</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">2</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">IXPE 178x1.0/7.5倍(有底纹,灰色)</textarea>
-          </td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">1530,8</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">3</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE 222x1.0/10倍(有底纹,黑色)</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">1776</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">4</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE 222x1.0/15倍(有底纹,黑色)</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">688,2</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">5</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE 225x1.0/15倍(有底纹,黑色)</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">540</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">6</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE 301x1.0/15倍(有底纹,黑色)</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">361,2</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">7</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE 301x1.0/18倍(有底纹,黑色)</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">722,4</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">8</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">原材料</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">Lưới sợi thủy tinh (trắng) 150g*1000mm</textarea>
-          </td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">510</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">9</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">Lưới sợi thủy tinh (trắng) 80g*660mm</textarea>
-          </td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">500</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">10</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">Thanh keo dán 25kg/thùng</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">kg</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">2025</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">11</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">原材料</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">Vải sợi thủy tinh 0.06x980</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">153</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">12</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">原材料</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">Film trong 0.55x980/42PHR</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">kg</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">40</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">13</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">纸盒</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">Hộp giấy 769x274x58</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">pcs</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">1134</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">14</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">面料</textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)">Film màu YDM45-19(TW-5411-6)</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">m</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">9910</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">15</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">16</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td class="stt">17</td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <thead>
-          <tr>
-            <td colspan="9" class="pdt10 pdb10">
-              <span>备注：一式两联 第一联白：财务 第二联红：资财课</span>
-              <span>Ghi chú: Mỗi phiếu gồm hai liên; liên trắng: Tài vụ; liên hồng: Vật tư</span>
+            <td class="stt">1</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">IXPE 454x1.0/18倍(有底纹,黑色)</textarea>
             </td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">2270</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
           </tr>
-        </thead>
-      </table>
-    </div>
-    <div class="signature-section">
-      <div class="signature">
-        <div>
-          <span>仓库主管:</span>
-          <span>Chủ quản kho:</span>
-        </div>
-        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+          <tr>
+            <td class="stt">2</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">IXPE 178x1.0/7.5倍(有底纹,灰色)</textarea>
+            </td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">1530,8</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">3</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE 222x1.0/10倍(有底纹,黑色)</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">1776</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">4</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE 222x1.0/15倍(有底纹,黑色)</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">688,2</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">5</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE 225x1.0/15倍(有底纹,黑色)</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">540</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">6</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE 301x1.0/15倍(有底纹,黑色)</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">361,2</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">7</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE 301x1.0/18倍(有底纹,黑色)</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m2</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">722,4</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">8</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">原材料</textarea></td>
+            <td><textarea class="input-field"
+                oninput="autoResize(this)">Lưới sợi thủy tinh (trắng) 150g*1000mm</textarea>
+            </td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">510</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">9</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">Lưới sợi thủy tinh (trắng) 80g*660mm</textarea>
+            </td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">500</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">10</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">IXPE</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">Thanh keo dán 25kg/thùng</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">kg</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">2025</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">11</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">原材料</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">Vải sợi thủy tinh 0.06x980</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">153</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">12</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">原材料</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">Film trong 0.55x980/42PHR</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">kg</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">40</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">13</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">纸盒</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">Hộp giấy 769x274x58</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">pcs</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">1134</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">14</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">面料</textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)">Film màu YDM45-19(TW-5411-6)</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">m</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">9910</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">15</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">16</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="stt">17</td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)">01/01/2024</textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field tex-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <thead>
+            <tr>
+              <td colspan="9" class="pdt10 pdb10">
+                <span>备注：一式两联 第一联白：财务 第二联红：资财课</span>
+                <span>Ghi chú: Mỗi phiếu gồm hai liên; liên trắng: Tài vụ; liên hồng: Vật tư</span>
+              </td>
+            </tr>
+          </thead>
+        </table>
       </div>
-      <div class="signature">
-        <div>
-          <span>验收人:</span>
-          <span>Người nghiệm thu:</span>
+      <div class="signature-section">
+        <div class="signature">
+          <div>
+            <span>仓库主管:</span>
+            <span>Chủ quản kho:</span>
+          </div>
+          <button onclick="signatureConfirm(this)">Ký 簽名</button>
         </div>
-        <button onclick="signatureConfirm(this)">Ký 簽名</button>
-      </div>
-      <div class="signature">
-        <div>
-          <span>退货员:</span>
-          <span>Người trả kho:</span>
+        <div class="signature">
+          <div>
+            <span>验收人:</span>
+            <span>Người nghiệm thu:</span>
+          </div>
+          <button onclick="signatureConfirm(this)">Ký 簽名</button>
         </div>
-        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+        <div class="signature">
+          <div>
+            <span>退货员:</span>
+            <span>Người trả kho:</span>
+          </div>
+          <button onclick="signatureConfirm(this)">Ký 簽名</button>
+        </div>
       </div>
     </div>
   </div>
