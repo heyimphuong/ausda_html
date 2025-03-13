@@ -53,7 +53,11 @@ $(document).ready(function () {
   // Cập nhật STT cho từng hàng
   function updateSTT() {
     $("#dataTable tbody tr").each(function (index) {
-      $(this).find(".stt").text(index + 1);
+      var sttCell = $(this).find(".stt");
+
+      if (sttCell.length) {
+        sttCell.text(index + 1); // Nếu có class "stt" thì cập nhật số thứ tự
+      }
     });
   }
 
@@ -77,15 +81,20 @@ $(document).ready(function () {
     updateSTT(); // Cập nhật lại số thứ tự
   });
 
-
-  // Chọn / bỏ chọn hàng khi click
-  $("#dataTable").on("click", "tr", function () {
-    $(this).toggleClass("selected");
+  // Chỉ chọn dòng khi click vào ô có class "first-child" hoặc "stt"
+  $("#dataTable tbody").on("click", "td.first-child, td.stt", function (event) {
+    $(this).parent().toggleClass("selected"); // Thêm/xóa class "selected" cho cả dòng
+    event.stopPropagation(); // Ngăn chặn sự kiện lan ra các ô khác
   });
 
-  // Xóa các dòng đã chọn
+  // Ngăn chặn chọn dòng khi click vào các ô khác
+  $("#dataTable tbody").on("click", "td:not(.first-child):not(.stt)", function (event) {
+    event.stopPropagation(); // Ngăn chặn sự kiện lan ra ngoài, không chọn dòng
+  });
+
+  // Xóa dòng đã chọn
   $("#deleteRow").click(function () {
-    var selectedRows = $("#dataTable tr.selected");
+    var selectedRows = $("#dataTable tbody tr.selected");
 
     if (selectedRows.length === 0) {
       alert("Vui lòng chọn ít nhất một dòng để xóa!");
