@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/print.css">
+  <title> Công đoạn khóa </title>
+  <script src="/assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/app.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="tabbar">
+    <button id="goBack">Quay lại 返回</button>
+    <button id="addRow">Thêm dòng 添加行</button>
+    <button id="deleteRow">Xóa dòng 删除行</button>
+    <button id="printPage">In 打印</button>
+  </div>
+  <div class="wrapper horizontal">
+    <div class="header">
+      <div class="title">
+        <div class="mb10">
+          <span>澳世达地材科技有限公司</span>
+          <span>CÔNG TY TNHH CÔNG NGHỆ TẤM LÁT SÀN AUSDA</span>
+        </div>
+        <div class="header-company">
+          <span>制品首件检验单---锁扣工序</span>
+          <span>Bảng kiểm tra chất lượng kiện sản phẩm đầu tiên ---- Công đoạn khóa</span>
+        </div>
+      </div>
+      <div class="info-box-column mb15">
+        <div class="info-item no-wrap w-70">
+          <div>
+            <span>班次：</span>
+            <span>Ca:
+              <input type="text" class="input-field border-bot w-40" value="">
+            </span>
+          </div>
+          <div>
+            <span>生产线：</span>
+            <span>
+              Dây chuyền sản xuất:
+              <input type="text" class="input-field border-bot w-50" value="">
+            </span>
+          </div>
+          <div>
+            <span>日期：</span>
+            <span>
+              Ngày tháng:
+              <input type="text" class="input-field border-bot w-50" value="">
+            </span>
+          </div>
+        </div>
+        <div class="info-item">
+          <span>ASD-PD-20210218032-A</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <table >
+        <thead>
+          <tr>
+            <th rowspan="2" class="text-center">
+              <span>时间</span>
+              <span>Thời gian</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>订单号</span>
+              <span>Số đơn đặt</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>产品编号</span>
+              <span>Mã sản phẩm</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>规格</span>
+              <span>Quy cách</span>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="signature-section">
+      <div class="signature">
+        <div class="spacing">
+          <span>生产副总：</span>
+          <span>Phó TGĐ sản xuất:</span>
+        </div>
+        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+      </div>
+      <div class="signature">
+        <div class="spacing">
+          <span>生产经理:</span>
+          <span>Giám đốc sản xuất:</span>
+        </div>
+        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+      </div>
+      <div class="signature">
+        <div class="spacing">
+          <span>生产课长:</span>
+          <span>Trưởng bộ phận:</span>
+        </div>
+        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+      </div>
+      <div class="signature">
+        <div class="spacing">
+          <span>生产组长:</span>
+          <span>Tổ trưởng:</span>
+        </div>
+        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

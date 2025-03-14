@@ -50,68 +50,108 @@ $(document).ready(function () {
   //   element.style.height = element.scrollHeight + "px"; // Set chiều cao theo nội dung
   // };
 
-  // Cập nhật STT cho từng hàng
-  function updateSTT() {
-    $("#dataTable tbody tr").each(function (index) {
-      var sttCell = $(this).find(".stt");
+  $(document).ready(function () {
+    let currentTable = null; // Lưu bảng hiện tại được chọn
 
-      if (sttCell.length) {
-        sttCell.text(index + 1); // Nếu có class "stt" thì cập nhật số thứ tự
+    // Chỉ chọn bảng khi click vào bất kỳ nơi nào trên bảng
+    $("table").click(function () {
+      if (!$(this).hasClass("selected")) {
+        $("table").removeClass("selected");
+        $(this).addClass("selected");
+
+        // Bỏ chọn tất cả dòng đã chọn ở bảng khác
+        $("tr.select").removeClass("select");
+        currentTable = this;
       }
     });
-  }
 
-  $("#addRow").click(function () {
-    var lastRow = $("#dataTable tbody tr:last"); // Lấy hàng cuối cùng
-    if (lastRow.length === 0) {
-      alert("Không có dòng nào để sao chép!");
-      return;
+    // Cập nhật STT cho từng hàng trong bảng được truyền vào
+    function updateSTT(table) {
+      $(table).find("tbody tr").each(function (index) {
+        var sttCell = $(this).find(".stt");
+        if (sttCell.length) {
+          sttCell.text(index + 1); // Nếu có class "stt" thì cập nhật số thứ tự
+        }
+      });
     }
 
-    var newRow = lastRow.clone(); // Clone hàng cuối cùng
+    // Thêm hàng mới vào bảng đã chọn
+    $("#addRow").click(function () {
+      // find selected table
+      var selectedTable = $('table').get(0);
+      if ($('table').length > 1) {
+        if ($('table.selected').length === 0) {
+          alert('Vui lòng chọn bảng cần thêm dòng!\n 请选择需要更多行的表！');
+          return;
+        } else {
+          selectedTable = $('table.selected').get(0);
+        }
+      }
 
-    // Xóa nội dung trong các textarea của hàng mới
-    newRow.find("textarea").val("");
+      // Clone hàng đầu tiên để giữ nguyên cấu trúc
+      var firstRow = $(selectedTable).find("tbody tr:first");
+      var newRow = firstRow.clone();
 
-    // Đặt STT về rỗng để cập nhật lại sau
-    newRow.find(".stt").text("");
+      // Xóa nội dung trong các textarea của hàng mới
+      newRow.find(".input-field").val("");
 
-    $("#dataTable tbody").append(newRow); // Thêm vào bảng
+      // Đặt STT về rỗng để cập nhật lại sau
+      newRow.find(".stt").text("");
 
-    updateSTT(); // Cập nhật lại số thứ tự
-  });
+      newRow.removeClass("select")
 
-  // Chỉ chọn dòng khi click vào ô có class "first-child" hoặc "stt"
-  $("#dataTable tbody").on("click", "td.first-child, td.stt", function (event) {
-    $(this).parent().toggleClass("selected"); // Thêm/xóa class "selected" cho cả dòng
-    event.stopPropagation(); // Ngăn chặn sự kiện lan ra các ô khác
-  });
+      // Bỏ chọn tất cả các dòng đang được chọn trước khi thêm hàng mới
+      $(selectedTable).find("tr.select").removeClass("select");
 
-  // Ngăn chặn chọn dòng khi click vào các ô khác
-  $("#dataTable tbody").on("click", "td:not(.first-child):not(.stt)", function (event) {
-    event.stopPropagation(); // Ngăn chặn sự kiện lan ra ngoài, không chọn dòng
-  });
+      $(selectedTable).find("tbody").append(newRow); // Thêm vào bảng
 
-  // Xóa dòng đã chọn
-  $("#deleteRow").click(function () {
-    var selectedRows = $("#dataTable tbody tr.selected");
+      updateSTT(selectedTable); // Cập nhật lại số thứ tự
+    });
 
-    if (selectedRows.length === 0) {
-      alert("Vui lòng chọn ít nhất một dòng để xóa!");
-      return;
-    }
+    // Khi nhấp vào ô có class "first-child" hoặc "stt" => Chọn bảng + chọn dòng luôn
+    $("table").on("click", "td.first-child, td.stt", function (event) {
+      var row = $(this).closest("tr");
+      var table = row.closest("table").get(0);
 
-    var confirmDelete = confirm(`Bạn có chắc chắn muốn xóa ${selectedRows.length} dòng đã chọn không?`);
+      // Nếu bảng chưa được chọn, chọn luôn
+      if (!$(table).hasClass("selected")) {
+        $("table").removeClass("selected");
+        $(table).addClass("selected");
+        $("tr.select").removeClass("select"); // Bỏ chọn tất cả dòng của bảng khác
+        currentTable = table;
+      }
 
-    if (confirmDelete) {
-      selectedRows.remove();
-      updateSTT();
-    }
+      // Chọn dòng trong bảng hiện tại
+      row.toggleClass("select");
+      event.stopPropagation(); // Ngăn chặn sự kiện lan ra các ô khác
+    });
+
+    // Xóa dòng đã chọn
+    $("#deleteRow").click(function () {
+      if (!currentTable) {
+        alert("Vui lòng chọn bảng để xóa dòng!");
+        return;
+      }
+
+      var selectedRows = $(currentTable).find("tr.select");
+
+      if (selectedRows.length === 0) {
+        alert("Vui lòng chọn ít nhất một dòng để xóa!");
+        return
+      }
+
+      var confirmDelete = confirm(`Bạn có chắc chắn muốn xóa ${selectedRows.length} dòng đã chọn không?`);
+
+      if (confirmDelete) {
+        selectedRows.remove();
+        updateSTT(currentTable);
+      }
+    });
   });
 
   // Xử lý khi nhấn nút "Quay lại"
   $("#goBack").click(function () {
-    window.location.href = "http://localhost:3000/";
+    window.location.href = "/";
   });
 
   $("#printPage").click(function () {
