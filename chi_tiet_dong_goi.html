@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/print.css">
+  <title>Chi tiết đóng gói</title>
+  <script src="/assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/app.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="tabbar">
+    <button id="goBack">Quay lại 返回</button>
+    <button id="addRow">Thêm dòng 添加行</button>
+    <button id="deleteRow">Xóa dòng 删除行</button>
+    <button id="printPage">In 打印</button>
+  </div>
+  <div class="wrapper horizontal">
+    <div class="header">
+      <div class="title">
+        <div class="mb10">
+          <span>澳世达地材科技有限公司</span>
+          <span>CÔNG TY TNHH CÔNG NGHỆ TẤM LÁT SÀN AUSDA</span>
+        </div>
+        <div>
+          <span>装 件 明 细</span>
+          <span>Chi Tiết Đóng Gói</span>
+        </div>
+      </div>
+      <div class="info-box-column mb15">
+        <div class="info-item no-wrap bold">
+          <span>订单号：
+            <input type="text" class="input-field border-bot bold" value="711-250015">
+          </span>
+        </div>
+        <div class="info-item no-wrap">
+          <span>开单日期：
+            <input type="text" class="input-field border-bot" value="2025年2月25日	">
+          </span>
+        </div>
+        <div class="info-item no-wrap">
+          <span>完工日：
+            <input type="text" class="input-field border-bot" value="2025年3月27日">
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2" class="text-center">
+              <span>件 号</span>
+              <span>Số kiện</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>产 品 编 号</span>
+              <span>Mã sản phẩm</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>面料编号</span>
+              <span>Mã film hoa văn</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>完工统计</span>
+              <span>thống kê hoàn thành</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>追加统计</span>
+              <span>thống kê bổ sung</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>生 产 规 格</span>
+              <span>Quy cách sản phẩm</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>压 纹</span>
+              <span>Dập nổi</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>纸 盒 批 号</span>
+              <span>Số lô hộp giấy</span>
+            </th>
+            <th colspan="3" class="text-center">
+              <span>包装数量</span>
+              <span>Số lượng đóng gói</span>
+            </th>
+            <th rowspan="2" class="text-center">
+              <span>生 产 要 求 Yêu cầu sản xuất</span>
+            </th>
+          </tr>
+          <tr>
+            <th class="text-center">
+              <span>片/盒(tấm/hộp)</span>
+            </th>
+            <th class="text-center">
+              <span>盒/件(hộp/kiện)</span>
+            </th>
+            <th class="text-center">
+              <span>盒/层(hộp/lớp)</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">
+              <span>1~24</span>
+            </td>
+            <td class="text-center bold">
+              <span>HF1664W</span>
+            </td>
+            <td class="text-center bold">
+              <span>DNS402</span>
+            </td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td class="text-center">
+              <span>181mm x 1220mm x 5.0/0.5mm (4.0mm+1.0mm 软木 Cork)</span>
+            </td>
+            <td class="text-center">
+              <span>MD17</span>
+            </td>
+            <td class="text-center">
+              <span>20250327</span>
+            </td>
+            <td class="text-center">
+              <span>10片/盒</span>
+            </td>
+            <td class="text-center">
+              <span>55盒/件</span>
+            </td>
+            <td class="text-center">
+              <span>5盒/11层</span>
+            </td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2" class="text-center">
+              <span> 唛头O/No.0： </span>
+            </td>
+            <td colspan="2" class="text-center">
+              <textarea class="input-field text-center t_red" oninput="autoResize(this)">PI15103</textarea>
+            </td>
+            </td>
+            <td class="text-center">
+              <span> Lot no： </span>
+            </td>
+            <td class="text-center">
+              <textarea class="input-field text-center t_red" oninput="autoResize(this)">S2720250125-5</textarea>
+            </td>
+            </td>
+            <td colspan="6"></td>
+          </tr>
+          <tr>
+            <td rowspan="5"></td>
+            <td colspan="2" class="text-center">
+              <span>规 格 quy cách </span>
+            </td>
+            <td colspan="2" class="text-center">
+              <span>单件材积 kt pallet </span>
+            </td>
+            <td class="text-center">
+              <span>总件数 tổng kiện</span>
+            </td>
+            <td colspan="2" class="text-center">
+              <span>栈板材质</span>
+            </td>
+            <td class="text-center">
+              <span>单件毛重</span>
+            </td>
+            <td class="text-center">
+              <span>单件净重</span>
+            </td>
+            <td class="text-center">
+              <span>纸盒型号</span>
+              <span>mã hộp giấy</span>
+            </td>
+            <td class="text-center">
+              <span>说明书 sách hướng dẫn</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><textarea class="input-field text-center"
+                oninput="autoResize(this)">181mm x 1220mm x 5.0/0.5mm (4.0mm+1.0mm 软木 Cork)</textarea></td>
+            <td colspan="2"><textarea class="input-field text-center"
+                oninput="autoResize(this)">1250*1000*885</textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)">24件</textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)">原木</textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)">两头开口</textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)">980</textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)">952</textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)">711-02</textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="text-right">
+              <span>出货时间：</span>
+              <span>Thời gian giao hàng :</span>
+            </td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="text-right">
+              <span>总单件毛重:</span>
+              <span>Tổng trọng lượng GROSS:</span>
+            </td>
+            <td colspan="3" class="text-center">
+              <textarea class="input-field text-center" oninput="autoResize(this)">23520 kg</textarea>
+            </td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2" class="text-center">
+              <span>总单件净重:</span>
+              <span>Tổng trọng lượng NET:</span>
+            </td>
+            <td class="text-center">
+              <textarea class="input-field text-center" oninput="autoResize(this)">22848 kg</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="11" class="pdt10 pdb10">
+              <span>1. 依客人确认标准样生产</span>
+              <span>Sản xuất hàng loạt theo mẫu tiêu chuẩn khách hàng đã xác nhận.</span>
+              <span>2. 锁扣产品纸盒必须贴有专利贴纸</span>
+              <span>Trên hộp giấy sản phẩm có nghèm khóa phải có tem bản quyền unilin</span>
+              <span>3. 請依照客人包裝指示說明包裝打件裝櫃</span>
+              <span>Đề nghị dựa theo hướng dẫn đóng gói chi tiết của khách hàng để đóng gói, đóng kiện và đóng
+                cont</span>
+              <span>4. 請依照客人品質指示說明生產</span>
+              <span>Đề nghị dựa theo hướng dẫn chất lượng của khách hàng để sản xuất</span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="signature-section pdt18">
+      <div class="signature">
+        <div>
+          <span class="bold"> 核 准:</span>
+        </div>
+        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+      </div>
+      <div class="signature">
+        <div>
+          <span class="bold">资财课长:</span>
+        </div>
+        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+      </div>
+      <div class="signature">
+        <div>
+          <span class="bold">生管:</span>
+        </div>
+        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+      </div>
+      <div class="signature">
+        <div>
+          <span class="bold">制 单:</span>
+        </div>
+        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+      </div>
+      <div class="signature">
+        <div>
+          <span class="bold">FQC:</span>
+        </div>
+        <button onclick="signatureConfirm(this)">Ký 簽名</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
