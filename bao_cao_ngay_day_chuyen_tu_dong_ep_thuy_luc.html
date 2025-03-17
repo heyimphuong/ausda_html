@@ -12,7 +12,13 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="tabbar">
+    <button id="goBack">Quay lại 返回</button>
+    <button id="addRow">Thêm dòng 添加行</button>
+    <button id="deleteRow">Xóa dòng 删除行</button>
+    <button id="printPage">In 打印</button>
+  </div>
+  <div class="wrapper horizontal">
     <div class="header">
       <div class="title">
         <div class="mb10">
@@ -27,262 +33,268 @@
     </div>
     <div class="container">
       <table>
-        <tr>
-          <td rowspan="2" class="column-head text-center">
-            <span>组 别</span>
-            <span>Nhóm</span>
-          </td>
-          <td rowspan="2" class="column-head text-center">
-            <span>订单号</span>
-            <span>Số đơn hàng</span>
-          </td>
-          <td rowspan="2" class="column-head text-center">
-            <span>产品编号</span>
-            <span>Mã sản xuất</span>
-          </td>
-          <td rowspan="2" colspan="2" class="column-head text-center">
-            <span>规格/厚度</span>
-            <span>Quy cách/Độ dày</span>
-          </td>
-          <td rowspan="2" class="column-head text-center">
-            <span>压纹 </span>
-            <span>Vân ép</span>
-          </td>
-          <td rowspan="2" class="column-head text-center">
-            <span>模数</span>
-            <span>Mô đun</span>
-          </td>
-          <td rowspan="2" class="column-head text-center">
-            <span>重烧</span>
-            <span>Nung lại</span>
-          </td>
-          <td rowspan="2" colspan="2" class="column-head text-center">
-            <span>产量/账</span>
-            <span>Sản lượng/Tấm</span>
-          </td>
-          <td rowspan="2" colspan="3" class="column-head text-center">
-            <span>出勤人员</span>
-            <span>Nhân viên đi làm</span>
-          </td>
-          <td colspan="2" class="column-head text-center">
-            <span>出勤工时 Giờ công</span>
-          </td>
-          <td rowspan="2" class="column-head text-center">
-            <span>新资</span>
-            <span>Lương</span>
-          </td>
-        </tr>
-        <tr>
-          <td class="column-head text-center">
-            <span>正常</span>
-            <span>B.Thường</span>
-          </td>
-          <td class="column-head text-center">
-            <span>加班</span>
-            <span>Tăng ca</span>
-          </td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td rowspan="2" class="text-center">
-            <span>薪资算法</span>
-            <span>Cách tính lương</span>
-          </td>
-          <td colspan="11" rowspan="2">
-            <textarea class="input-field" oninput="autoResize(this)"></textarea>
-          </td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
-        </tr>
+        <thead>
+          <tr>
+            <td rowspan="2" class="column-head text-center">
+              <span>组 别</span>
+              <span>Nhóm</span>
+            </td>
+            <td rowspan="2" class="column-head text-center">
+              <span>订单号</span>
+              <span>Số đơn hàng</span>
+            </td>
+            <td rowspan="2" class="column-head text-center">
+              <span>产品编号</span>
+              <span>Mã sản xuất</span>
+            </td>
+            <td rowspan="2" colspan="2" class="column-head text-center">
+              <span>规格/厚度</span>
+              <span>Quy cách/Độ dày</span>
+            </td>
+            <td rowspan="2" class="column-head text-center">
+              <span>压纹 </span>
+              <span>Vân ép</span>
+            </td>
+            <td rowspan="2" class="column-head text-center">
+              <span>模数</span>
+              <span>Mô đun</span>
+            </td>
+            <td rowspan="2" class="column-head text-center">
+              <span>重烧</span>
+              <span>Nung lại</span>
+            </td>
+            <td rowspan="2" colspan="2" class="column-head text-center">
+              <span>产量/账</span>
+              <span>Sản lượng/Tấm</span>
+            </td>
+            <td rowspan="2" colspan="3" class="column-head text-center">
+              <span>出勤人员</span>
+              <span>Nhân viên đi làm</span>
+            </td>
+            <td colspan="2" class="column-head text-center">
+              <span>出勤工时 Giờ công</span>
+            </td>
+            <td rowspan="2" class="column-head text-center">
+              <span>新资</span>
+              <span>Lương</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="column-head text-center">
+              <span>正常</span>
+              <span>B.Thường</span>
+            </td>
+            <td class="column-head text-center">
+              <span>加班</span>
+              <span>Tăng ca</span>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td  class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="2"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td colspan="3"><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td rowspan="2" class="text-center">
+              <span>薪资算法</span>
+              <span>Cách tính lương</span>
+            </td>
+            <td colspan="11" rowspan="2">
+              <textarea class="input-field" oninput="autoResize(this)"></textarea>
+            </td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center" oninput="autoResize(this)"></textarea></td>
+          </tr>
+        </tfoot>
       </table>
     </div>
   </div>

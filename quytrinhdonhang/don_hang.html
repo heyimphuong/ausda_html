@@ -12,6 +12,12 @@
 </head>
 
 <body>
+  <div class="tabbar">
+    <button id="goBack">Quay lại 返回</button>
+    <button id="addRow">Thêm dòng 添加行</button>
+    <button id="deleteRow">Xóa dòng 删除行</button>
+    <button id="printPage">In 打印</button>
+  </div>
   <div class="wrapper">
     <div class="header">
       <div class="title">
@@ -74,168 +80,174 @@
     </div>
     <div class="container">
       <table>
-        <tr>
-          <td class="text-center column-head">
-            <span>产品编号</span>
-            <span>Mã sản phẩm</span>
-          </td>
-          <td class="text-center column-head">
-            <span>面料编号</span>
-            <span>Mã film hoa văn</span>
-          </td>
-          <td class="text-center column-head">
-            <span>压纹</span>
-            <span>Dập nổi</span>
-          </td>
-          <td class="text-center column-head">
-            <span>底料</span>
-            <span>Vật liệu đế</span>
-          </td>
-          <td class="text-center column-head">
-            <span>数量/Số</span>
-            <span>lượng</span>
-            <span>(件/Kiện)</span>
-          </td>
-          <td class="text-center column-head">
-            <span>数量</span>
-            <span>Số lượng</span>
-            <span>(盒/Hộp)</span>
-          </td>
-          <td class="text-center column-head">
-            <span>需用量</span>
-            <span>Lượng cần dùng</span>
-            <span>(平方米/m2)</span>
-          </td>
-          <td class="text-center column-head">
-            <span>现有库存</span>
-            <span>Hiện còn trong kho</span>
-            <span>(米/m)</span>
-          </td>
-          <td class="text-center column-head">
-            <span>在途量</span>
-            <span>Đang vận chuyển</span>
-            <span>(米/m)</span>
-          </td>
-          <td class="text-center column-head">
-            <span>余量</span>
-            <span>Còn dư</span>
-            <span>(米/m)</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label class="bold">EK4321</label>
-          </td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">灰色（màu xám)</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">10</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">550</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">1430,55</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td>
-            <label class="bold">EK4324</label>
-          </td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">CDW-686XL-01</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">MFH</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">灰色（màu xám)</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">6</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">330</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">858,33</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
-        </tr>
-        <tr>
-          <td colspan="10">
-            <textarea class="input-field"
-              oninput="autoResize(this)">光泽度（3~5），一般压纹, PU淋膜， UV涂层，四边小倒角，Unilin锁扣产品，干底, +1.0mm 黑色IXPE(15倍, 无底纹).
+        <thead>
+          <tr>
+            <td class="text-center column-head">
+              <span>产品编号</span>
+              <span>Mã sản phẩm</span>
+            </td>
+            <td class="text-center column-head">
+              <span>面料编号</span>
+              <span>Mã film hoa văn</span>
+            </td>
+            <td class="text-center column-head">
+              <span>压纹</span>
+              <span>Dập nổi</span>
+            </td>
+            <td class="text-center column-head">
+              <span>底料</span>
+              <span>Vật liệu đế</span>
+            </td>
+            <td class="text-center column-head">
+              <span>数量/Số</span>
+              <span>lượng</span>
+              <span>(件/Kiện)</span>
+            </td>
+            <td class="text-center column-head">
+              <span>数量</span>
+              <span>Số lượng</span>
+              <span>(盒/Hộp)</span>
+            </td>
+            <td class="text-center column-head">
+              <span>需用量</span>
+              <span>Lượng cần dùng</span>
+              <span>(平方米/m2)</span>
+            </td>
+            <td class="text-center column-head">
+              <span>现有库存</span>
+              <span>Hiện còn trong kho</span>
+              <span>(米/m)</span>
+            </td>
+            <td class="text-center column-head">
+              <span>在途量</span>
+              <span>Đang vận chuyển</span>
+              <span>(米/m)</span>
+            </td>
+            <td class="text-center column-head">
+              <span>余量</span>
+              <span>Còn dư</span>
+              <span>(米/m)</span>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="first-child">
+              <label class="bold">EK4321</label>
+            </td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">灰色（màu xám)</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">10</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">550</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">1430,55</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child">
+              <label class="bold">EK4324</label>
+            </td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">CDW-686XL-01</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">MFH</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">灰色（màu xám)</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">6</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">330</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">858,33</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+          </tr>
+          <tr>
+            <td class="first-child"><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)"></textarea></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="10">
+              <textarea class="input-field"
+                oninput="autoResize(this)">光泽度（3~5），一般压纹, PU淋膜， UV涂层，四边小倒角，Unilin锁扣产品，干底, +1.0mm 黑色IXPE(15倍, 无底纹).
 Siêu lì (3~5)，dập nổi thông thường，lớp sơn phủ PU, sơn UV,vát mép nhỏ bốn cạnh, sản phẩm có nghèm khóa unilin，đáy khô, +1.0mm IXPE màu đen,(15lần, đáy không có vân).</textarea>
-          </td>
-        </tr>
-        <tr>
-          <td style="border-right: none;width: 15%;">
-            <span>规格/Quy cách：</span>
-          </td>
-          <td colspan="9" style="border-left: none;">
-            <input type="text" class="input-field" value="177.8x1219.2x5.0/0.30mm(4.0mm+1.0mm black IXPE)">
-          </td>
-        </tr>
-        <tr>
-          <td colspan="10">
-            <textarea class="input-field"
-              oninput="autoResize(this)">12片/盒，55盒/件, 16件/1x20' 12 tấm/hộp, 55 hộp/kiện, 16 kiện/1x20'container</textarea>
-          </td>
-        </tr>
-        <tr>
-          <td style="border-right: none;">
-            <span>纸盒/Thùng carton：</span>
-          </td>
-          <td colspan="9" style="border-left: none;">
-            <input type="text" class="input-field" value="803-01C">
-          </td>
-        </tr>
-        <tr>
-          <td colspan="4" class="text-center bold">总TỔNG</td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">16</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">880</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">2288,88</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">0</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">0</textarea></td>
-          <td><textarea class="input-field text-center bold" oninput="autoResize(this)">0</textarea></td>
-        </tr>
+            </td>
+          </tr>
+          <tr>
+            <td style="border-right: none;width: 15%;">
+              <span>规格/Quy cách：</span>
+            </td>
+            <td colspan="9" style="border-left: none;">
+              <input type="text" class="input-field" value="177.8x1219.2x5.0/0.30mm(4.0mm+1.0mm black IXPE)">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="10">
+              <textarea class="input-field"
+                oninput="autoResize(this)">12片/盒，55盒/件, 16件/1x20' 12 tấm/hộp, 55 hộp/kiện, 16 kiện/1x20'container</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td style="border-right: none;">
+              <span>纸盒/Thùng carton：</span>
+            </td>
+            <td colspan="9" style="border-left: none;">
+              <input type="text" class="input-field" value="803-01C">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="text-center bold">总TỔNG</td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">16</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">880</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">2288,88</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">0</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">0</textarea></td>
+            <td><textarea class="input-field text-center bold" oninput="autoResize(this)">0</textarea></td>
+          </tr>
+        </tfoot>
       </table>
     </div>
     <table class="custom-table right-content">

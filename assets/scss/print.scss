@@ -35,6 +35,7 @@ body {
     width: 100%;
     z-index: 999;
     padding: 5px 0;
+
     button {
         padding: 10px;
         border: none;
@@ -43,6 +44,7 @@ body {
         border-radius: 6px;
         transition: background 0.3s, color 0.3s;
         margin-left: 10px;
+
         &:hover {
             background-color: #666666;
             color: white;
@@ -227,29 +229,33 @@ textarea.input-field {
         .title_tag {
             font-weight: normal;
         }
+
         .header-img {
             display: flex;
             align-items: center;
             justify-content: center;
             border-bottom: 9px solid #52D1D1;
-    
+
             img {
                 width: 100px;
                 /* Chỉnh kích thước logo */
                 margin-right: 20px;
             }
         }
+
         .header-company {
             font-weight: normal;
         }
+
         .header-main {
             font-weight: bold;
             font-size: 20px;
-    
+
             &.text-decoration {
                 text-decoration: underline;
             }
         }
+
         .header-content {
             font-weight: normal;
             font-size: 14px;
@@ -427,11 +433,6 @@ table {
         }
     }
 
-    tr:hover {
-        background-color: #DDDDDD !important;
-        cursor: pointer;
-    }
-
     tr.select {
         background-color: #CCCCCC !important;
     }
@@ -499,6 +500,7 @@ table {
         margin-left: auto;
         width: auto;
         border-collapse: collapse;
+
         td {
             border: 1px solid black;
             width: 50%;
@@ -533,11 +535,11 @@ table {
         flex: 1;
         padding: 10px;
         margin-bottom: 15px;
-    
+
         span {
             display: block;
         }
-    
+
         button {
             margin-top: 15px;
             padding: 10px;
@@ -545,7 +547,7 @@ table {
             border: 1px solid #ccc;
             cursor: pointer;
             border-radius: 10px;
-    
+
             @media print {
                 display: none;
             }
