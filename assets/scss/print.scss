@@ -494,29 +494,6 @@ table {
             white-space: nowrap;
         }
     }
-
-    &.custom-table {
-        margin-top: 15px;
-        margin-left: auto;
-        width: auto;
-        border-collapse: collapse;
-
-        td {
-            border: 1px solid black;
-            width: 50%;
-            /* Chia đôi 111px */
-            height: 40px;
-            text-align: left;
-            vertical-align: top;
-            padding: 2px;
-        }
-    }
-}
-
-.remark-text {
-    span {
-        display: block;
-    }
 }
 
 .signature-container {
@@ -591,6 +568,47 @@ table {
     display: flex;
     flex-direction: column;
     padding: 0 35px;
+}
+
+.table-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.custom-table,
+.remark-text {
+    width: 48%;
+}
+
+.table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 8px;
+    width: 50%;
+
+    span {
+        display: block;
+    }
+}
+
+.remark-text {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 /* Ẩn viền theo từng hướng */
